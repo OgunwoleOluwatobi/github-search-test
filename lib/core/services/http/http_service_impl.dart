@@ -15,7 +15,7 @@ class HttpServiceImpl extends HttpService {
 
   @override
   setHeader() {
-    final String cred = 'ogunwoleoluwatobi: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';
+    final String cred = 'ogunwoleoluwatobi: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';
     final b64 = utf8.fuse(base64).encode(cred);
 
     final Map<String, dynamic> header = {

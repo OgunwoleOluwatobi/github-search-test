@@ -10,7 +10,7 @@ class RemoteDataSourceImpl extends RemoteDataSource {
   Future<Either<AppError, List<User>?>> fetchUsers(String name) async {
 
     try {
-      final raw = await _httpService.getHttp('/search/users?q=$name&per_page=10');
+      final raw = await _httpService.getHttp('/search/users?q=$name');
       if (raw['message'] == null) {
         return Right(UsersResponse.fromJson(raw).items);
       } else {

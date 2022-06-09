@@ -28,9 +28,11 @@ class UsersListView extends StatelessWidget {
               child: CustomTextField(
                 onChanged: (value) {
                   model.loading = true;
-                    if(value.isNotEmpty) {
-                      _debouncer.run(() => model.fetchUsers(value));
-                    }
+                  if(value.isNotEmpty) {
+                    _debouncer.run(() => model.fetchUsers(value));
+                    return;
+                  }
+                  _debouncer.run(() => model.clearUsers());
                 },
               )
             ),
@@ -47,7 +49,7 @@ class UsersListView extends StatelessWidget {
                     textAlign: TextAlign.center,
                   ),
                 ),
-              ) : model.users!.isEmpty ? Center(
+              ) : (model.users??[]).isEmpty ? Center(
                 child: SizedBox(
                   width: 250.w,
                   child: Text(

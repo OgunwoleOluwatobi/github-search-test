@@ -15,6 +15,12 @@ class UsersListViewModel extends BaseViewModel {
     notifyListeners();
   }
 
+  void clearUsers() {
+    loading = false;
+    users = null;
+    notifyListeners();
+  }
+
   Future fetchUsers(String name) async{
     loading = true;
     notifyListeners();
