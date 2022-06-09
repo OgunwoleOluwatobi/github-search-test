@@ -40,6 +40,22 @@ class UsersListViewModel extends BaseViewModel {
     );
   }
 
+  Future<int?> fetchRepoCount(String name) async{
+    int? count;
+    final data = await _remoteDataSource.fetchRepoCount(name);
+
+    data.fold(
+      (l) {
+        flusher(l.message, type: FlusherColorType.error);
+      },
+      (r) async{
+        count = r; 
+      }
+    );
+
+    return count;
+  }
+
   // void navigateToDetails(ClientTransactions val) {
   //   _navigationService.navigateTo(
   //     Routes.transactionDetails,

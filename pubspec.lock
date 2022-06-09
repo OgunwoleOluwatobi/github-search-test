@@ -258,6 +258,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "5.0.2"
+  flutter_hooks:
+    dependency: transitive
+    description:
+      name: flutter_hooks
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.18.4"
   flutter_lints:
     dependency: "direct dev"
     description:
@@ -667,6 +674,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.3.0"
+  stacked_hooks:
+    dependency: "direct main"
+    description:
+      name: stacked_hooks
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.2.2"
   stacked_services:
     dependency: "direct main"
     description:

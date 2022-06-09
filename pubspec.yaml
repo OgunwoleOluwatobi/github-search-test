@@ -45,6 +45,7 @@ dependencies:
   stacked_services: ^0.8.17
   liquid_swipe: ^2.1.1
   cached_network_image: ^3.2.1
+  stacked_hooks: ^0.2.2
 
 dev_dependencies:
   flutter_test:
